@@ -14,7 +14,8 @@ tree.put(9,9);
 tree.put(25,25);
 tree.put(17,17);
 tree.put(36,36);
-
+// method inorder subtree dakhel class abstrack binarry tree ra iz chap pedar rast be rast pedar chap taghir dadam ta list be sorat nozoli va nakos chap shavad
+    // sepas k omin onsar onra ba komak fo each dakhel methon k_max dakhel class treemap bedast ovordam
 System.out.println(tree.k_max(1));
 }
 }
