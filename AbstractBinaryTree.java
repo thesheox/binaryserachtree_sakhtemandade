@@ -36,7 +36,7 @@ import java.util.ArrayList;
  * @author Michael H. Goldwasser
  */
 public abstract class AbstractBinaryTree<E> extends AbstractTree<E>
-                                             implements BinaryTree<E> {
+        implements BinaryTree<E> {
 
   /**
    * Returns the Position of p's sibling (or null if no sibling exists).
@@ -96,11 +96,11 @@ public abstract class AbstractBinaryTree<E> extends AbstractTree<E>
    * @param snapshot  a list to which results are appended
    */
   private void inorderSubtree(Position<E> p, List<Position<E>> snapshot) {
-    if (left(p) != null)
-      inorderSubtree(left(p), snapshot);
-    snapshot.add(p);
     if (right(p) != null)
       inorderSubtree(right(p), snapshot);
+    snapshot.add(p);
+    if (left(p) != null)
+      inorderSubtree(left(p), snapshot);
   }
 
   /**

@@ -22,10 +22,7 @@
  */
 
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.NoSuchElementException;
+import java.util.*;
 
 /**
  * An implementation of a sorted map using a binary search tree.
@@ -505,5 +502,16 @@ public class TreeMap<K,V> extends AbstractSortedMap<K,V> {
       dumpRecurse(right(p), depth+1);
     }
   }
+
+ public K k_max(int max){
+    int index=0;
+   for(Entry<K, V> e: entrySet()){
+     index++;
+     if(index==max){
+       return e.getKey();
+     }
+   }
+   return null;
+ }
 
 }
